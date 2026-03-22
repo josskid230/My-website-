@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joseph Adeyemi | Premium Brand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/2349043260316" 
+     class="fixed bottom-5 right-5 bg-green-500 text-white px-5 py-3 rounded-full shadow-xl hover:scale-110 transition">
+     💬 Chat
+  </a>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-green-600 to-green-400 text-white text-center p-16">
+    <h1 class="text-4xl md:text-5xl font-bold">Joseph Adeyemi Akinsola</h1>
+    <p class="mt-4 text-lg">Helping You Build Health, Wealth & Digital Skills</p>
+    <div class="mt-6 space-x-3">
+      <a href="#contact" class="bg-white text-green-600 px-6 py-3 rounded-2xl">Start Now</a>
+      <a href="#services" class="border px-6 py-3 rounded-2xl">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="p-10 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">Who I Am</h2>
+    <p class="text-lg">
+      I help people improve their health, build extra income, and develop high-income digital skills.
+      My goal is to help you move from survival to success.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-white p-10">
+    <h2 class="text-3xl font-bold text-center mb-8">What I Offer</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="p-6 rounded-2xl shadow hover:shadow-xl transition">🌿 Health Solutions</div>
+      <div class="p-6 rounded-2xl shadow hover:shadow-xl transition">💼 Business Mentorship</div>
+      <div class="p-6 rounded-2xl shadow hover:shadow-xl transition">📈 Forex Guidance</div>
+      <div class="p-6 rounded-2xl shadow hover:shadow-xl transition">💻 Tech Services</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="p-10 text-center">
+    <h2 class="text-3xl font-bold mb-6">Success Stories</h2>
+    <div id="testimonial" class="bg-white p-6 rounded-2xl shadow max-w-xl mx-auto">
+      "I started earning within weeks!"
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-green-600 text-white p-12 text-center">
+    <h2 class="text-3xl font-bold">Start Your Journey</h2>
+    <p class="mt-2">Fill this form and I’ll contact you personally</p>
+    <form id="leadForm" class="mt-6 space-y-4 max-w-md mx-auto">
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded text-black" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" class="w-full p-3 rounded text-black" required />
+      <button type="submit" class="bg-white text-green-600 px-6 py-3 rounded-2xl w-full">Submit</button>
+    </form>
+    <p id="successMsg" class="mt-4 hidden">✅ Submitted! I will contact you soon.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 text-sm text-gray-600">
+    © 2026 Joseph Adeyemi Akinsola | Built for Results
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const testimonials = [
+      "I started earning within weeks!",
+      "My health improved naturally.",
+      "This opportunity changed my mindset."
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % testimonials.length;
+      document.getElementById('testimonial').innerText = testimonials[index];
+    }, 3000);
+
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMsg').classList.remove('hidden');
+    });
+  </script>
+
+</body>
+</html>
