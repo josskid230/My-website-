@@ -1,0 +1,21 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Personal business website for Joseph Adeyemi Akinsola",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve .",
+    "lint": "echo 'No linter configured for static HTML'"
+  },
+  "keywords": [
+    "personal-website",
+    "business",
+    "static-site"
+  ],
+  "author": "Joseph Adeyemi Akinsola",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.17"
+  }
+}
